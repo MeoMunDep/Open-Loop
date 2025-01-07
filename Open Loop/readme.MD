@@ -65,7 +65,7 @@ xxx@gmail.com
 
 ### 3. `passwords.txt` 💼 - Your email's password
 
-```txt - wallet address
+```txt 
 xxx...
 xxx...
 xxx...
@@ -84,7 +84,7 @@ socks5://user:password@host:port
 
 > You need to `cd` to the file after extract it.
 > Open the right directory: `cd open-loop-main/open-loop`
-> To run the bot, use the following command: `node bot`
-> To run the create accounts bot, use the following command: `node create_accounts`
+> To run the bot, use the following command: `node meomundep`
+> To run the referrals bot, use the following command: `node create_accounts`
 
 🎇Enjoy!

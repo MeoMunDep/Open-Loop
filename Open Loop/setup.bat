@@ -81,7 +81,7 @@ if exist "..\node_modules" (
 ) else (
     echo Using node_modules from current directory
 )
-cd "open loop" && node bot
+node meomundep
 pause
 goto MENU
 
