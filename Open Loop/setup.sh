@@ -76,6 +76,7 @@ create_default_configs() {
   "delayEachAccount": [1, 1],
   "timeToRestartAllAccounts": 300,
   "howManyAccountsRunInOneTime": 1,
+  "doTasks":true
 }
 EOL
 }
