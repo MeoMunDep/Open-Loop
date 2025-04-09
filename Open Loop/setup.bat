@@ -6,7 +6,7 @@ cd %~dp0
 
 echo Checking configuration files...
 
-(for %%F in (emails.txt passwords.txt proxies.txt) do (
+(for %%F in (tokens.txt proxies.txt) do (
     if not exist %%F (
         type nul > %%F
         echo Created %%F
@@ -19,7 +19,7 @@ echo Checking dependencies...
 if exist "..\node_modules" (
     echo Using node_modules from parent directory...
     cd ..
-    CALL npm install user-agents axios colors https-proxy-agent socks-proxy-agent 
+    CALL npm install user-agents axios colors https-proxy-agent socks-proxy-agent
     cd %~dp0
 ) else (
     echo Installing dependencies in current directory...
