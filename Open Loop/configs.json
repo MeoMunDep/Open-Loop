@@ -6,7 +6,5 @@
   "delayEachAccount": [5, 8],
   "timeToRestartAllAccounts": 300,
   "howManyAccountsRunInOneTime": 100,
-  "referralCode": "ol4126bf56",
-  "passwordsForCreateAccounts": "123456789",
-  "howManyAccountsRunInOneTimeWhenCreateAccounts": 100
+  "doTasks": true
 }
