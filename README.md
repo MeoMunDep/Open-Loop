@@ -48,7 +48,8 @@ Download Node.js and npm here: [Download Link](https://t.me/KeoAirDropFreeNe/257
   "proxyRotationInterval": 2,
   "delayEachAccount": [5, 8],
   "timeToRestartAllAccounts": 300,
-  "howManyAccountsRunInOneTime": 100
+  "howManyAccountsRunInOneTime": 100,
+  "doTasks":true
 }
 ```
 
