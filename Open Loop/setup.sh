@@ -1,5 +1,7 @@
 #!/bin/bash
 
+chmod +x "$0"
+
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
@@ -30,6 +32,40 @@ else
     MODULES_DIR="."
 fi
 
+check_node() {
+    if ! command -v node &> /dev/null; then
+        print_red "Node.js not found, installing..."
+        if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+            sudo apt update && sudo apt install -y nodejs npm
+        elif [[ "$OSTYPE" == "darwin"* ]]; then
+            brew install node
+        elif [[ "$OSTYPE" == "cygwin" || "$OSTYPE" == "msys" ]]; then
+            echo "Please install Node.js manually on Windows."
+        fi
+        print_green "Node.js installation completed."
+    else
+        print_green "Node.js is already installed."
+    fi
+}
+check_node
+
+check_git() {
+    if ! command -v git &> /dev/null; then
+        print_red "Git not found, installing..."
+        if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+            sudo apt update && sudo apt install -y git
+        elif [[ "$OSTYPE" == "darwin"* ]]; then
+            brew install git
+        elif [[ "$OSTYPE" == "cygwin" || "$OSTYPE" == "msys" ]]; then
+            echo "Please install Git manually on Windows."
+        fi
+        print_green "Git installation completed."
+    else
+        print_green "Git is already installed."
+    fi
+}
+check_git
+
 create_default_configs() {
     cat > configs.json << EOL
 {
@@ -40,9 +76,6 @@ create_default_configs() {
   "delayEachAccount": [1, 1],
   "timeToRestartAllAccounts": 300,
   "howManyAccountsRunInOneTime": 1,
-  "referralCode": "ol4126bf56",
-  "passwordsForCreateAccounts": "123456789",
-  "howManyAccountsRunInOneTimeWhenCreateAccounts": 100
 }
 EOL
 }
@@ -63,7 +96,7 @@ fi
 
 check_configs
 
-for file in emails.txt passwords.txt proxies.txt; do
+for file in datas.txt wallets.txt proxies.txt; do
     if [ ! -f "$file" ]; then
         touch "$file"
         print_green "Created $file"
@@ -74,7 +107,7 @@ print_green "Configuration files have been checked."
 
 print_yellow "Checking dependencies..."
 cd "$MODULES_DIR"
-npm install user-agents axios colors https-proxy-agent socks-proxy-agent 
+npm install user-agents axios colors https-proxy-agent socks-proxy-agent ethers web3 crypto-js ws uuid xlsx readline-sync moment lodash
 cd - > /dev/null
 print_green "Dependencies installation completed!"
 
