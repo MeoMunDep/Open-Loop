@@ -76,7 +76,7 @@ socks5://user:pass@host:port
 💡 Usage:
 
 > You need to `cd` to the file after extract it.
-> Open the right directory: `cd open-loop-main/open-loop`
+> Open the right directory: `cd "open-loop-main/open loop"`
 > To run the bot, use the following command: `node meomundep`
 
 🎇Enjoy!
