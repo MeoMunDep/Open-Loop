@@ -48,27 +48,16 @@ Download Node.js and npm here: [Download Link](https://t.me/KeoAirDropFreeNe/257
   "proxyRotationInterval": 2,
   "delayEachAccount": [5, 8],
   "timeToRestartAllAccounts": 300,
-  "howManyAccountsRunInOneTime": 100,
-  "referralCode": "ol4126bf56",
-  "passwordsForCreateAccounts": "123456789", // passwords for create accounts
-  "howManyAccountsRunInOneTimeWhenCreateAccounts": 100
+  "howManyAccountsRunInOneTime": 100
 }
 ```
 
-### 2. `emails.txt` 🗂️ - Your email's address
+### 2. `tokens.txt` - Get it from [here](https://t.me/KeoAirDropFreeNee/1689)
 
 ```txt
-xxx@gmail.com
-xxx@gmail.com
-xxx@gmail.com
-```
-
-### 3. `passwords.txt` 💼 - Your email's password
-
-```txt 
-xxx...
-xxx...
-xxx...
+ey...
+ey...
+ey...
 ```
 
 ### 4. `proxies.txt` 🌐 - Proxy is an option. If you have one, fill it in; otherwise, leave it blank.
@@ -89,6 +78,5 @@ socks5://user:pass@host:port
 > You need to `cd` to the file after extract it.
 > Open the right directory: `cd open-loop-main/open-loop`
 > To run the bot, use the following command: `node meomundep`
-> To run the referrals bot, use the following command: `node create_accounts`
 
 🎇Enjoy!
