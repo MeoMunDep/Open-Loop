@@ -42,7 +42,6 @@ Download Node.js and npm here: [Download Link](https://t.me/KeoAirDropFreeNe/257
 
 ```json
 {
-  "timeZone": "en-US",
   "rotateProxy": true,
   "skipInvalidProxy": false,
   "proxyRotationInterval": 2,
